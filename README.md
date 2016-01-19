@@ -14,3 +14,15 @@ static void skypeVar_MessageStatus(ChatMessage pMessage, TChatMessageStatus Stat
     ChatMessage rMessage = pMessage.Chat.SendMessage_Fixed("Hello world!"); // Replies to the message with 'Hello world!'. Notice that it should no longer bug in PMs
 }
 ```
+Adding a contact (by username)
+```
+Skype4COM_Fix.AddContact("foobar", "Hello world!"); // Sends a contact request to the specified user with the specified message
+```
+Adding a contact (by User type)
+```
+// This is only an example; it will add whoever sends you a message (which may accidentally remove them if they are already added)
+static void skypeVar_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status) // Skype's generated event for messages
+{
+    pMessage.Sender.AddContact("Hello world!"); // Adds said contact with the specified message
+}
+```
