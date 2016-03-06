@@ -1,7 +1,7 @@
 # Skype4COM-Extensions
 Skype4COM is outdated, broken and limited. This aims to fix small bugs in the API. This is by no means a new API, only extensions for it which allow it to do certain tasks that would be very difficult or glitchy in the original API.
 
-# (YOU SHOULD STOP USING SKYPE4COM NOW. AND MOVE OVER TO SKYPE4SHARP) [https://github.com/lin-e/Skype4Sharp]
+# [YOU SHOULD STOP USING SKYPE4COM NOW. AND MOVE OVER TO SKYPE4SHARP] (https://github.com/lin-e/Skype4Sharp)
 
 # Usage
 Starting usage
