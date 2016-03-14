@@ -5,24 +5,24 @@ Skype4COM is outdated, broken and limited. This aims to fix small bugs in the AP
 
 # Usage
 Starting usage
-```
+```C#
 Skype skypeVar = new Skype(); // Honestly, this should be a global variable. 
 skypeVar.Attach(); // Attaches to Skype client (basic Skype4COM)
 Skype4COM_Fix.mainSkype = skypeVar; // Sets Skype in the Fix
 ```
 Sending a message
-```
+```C#
 static void skypeVar_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status) // Skype's generated event for messages
 {
     ChatMessage rMessage = pMessage.Chat.SendMessage_Fixed("Hello world!"); // Replies to the message with 'Hello world!'. Notice that it should no longer bug in PMs
 }
 ```
 Adding a contact (by username)
-```
+```C#
 Skype4COM_Fix.AddContact("foobar", "Hello world!"); // Sends a contact request to the specified user with the specified message
 ```
 Adding a contact (by User type)
-```
+```C#
 // This is only an example; it will add whoever sends you a message (which may accidentally remove them if they are already added)
 static void skypeVar_MessageStatus(ChatMessage pMessage, TChatMessageStatus Status) // Skype's generated event for messages
 {
